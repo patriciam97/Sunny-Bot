@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Sunny-Bot</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/assets/leaflet_markers/MarkerCluster.css" />
+	<link rel="stylesheet" href="/assets/leaflet_markers/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="/css/mystyle.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark " style="height: 10%">
+      <div class="container menu">
+          <a href="#" class="navbar-brand">
+              <img src="logo.png" class="mylogo">
+            </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse container" id="navbarNav">
+                <label class="nav-link tab" data-toggle="modal" data-target="#aboutmodal">About</label>
+                <label class="nav-link tab" for="countries">Country </label>
+                <select class="form-control myinputbox" id="countries">
+                  <option >ALL</option>
+                  <option>AFGHANISTAN</option>
+                  <option>ALAND ISLANDS</option>
+                  <option>ALBANIA</option>
+                  <option>ALGERIA</option>
+                  <option>AMERICAN SAMOA</option>
+                  <option>ANGOLA</option>
+                  <option>ANGUILLA</option>
+                  <option>ANTIGUA AND BARBUDA</option>
+                  <option>ARGENTINA</option>
+                  <option>ARMENIA</option>
+                  <option>ARUBA</option>
+                  <option>AUSTRALIA</option>
+                  <option>AUSTRIA</option>
+                  <option>BAHAMAS</option>
+                  <option>BANGLADESH</option>
+                  <option>BARBADOS</option>
+                  <option>BELARUS</option>
+                  <option>BELGIUM</option>
+                  <option>BELIZE</option>
+                  <option>BOLIVIA</option>
+                  <option>BOSNIA AND HERZEGOVI</option>
+                  <option>BOTSWANA</option>
+                  <option>BRAZIL</option>
+                  <option>BRUNEI DARUSSALAM</option>
+                  <option>BULGARIA</option>
+                  <option>BURKINA FASO</option>
+                  <option>BURUNDI</option>
+                  <option>CAMBODIA</option>
+                  <option>CAMEROON</option>
+                  <option>CANADA</option>
+                  <option>CAPE VERDE</option>
+                  <option>CAYMAN ISLANDS</option>
+                  <option>CENTRAL AFRICAN REPU</option>
+                  <option>CHILE</option>
+                  <option>CHINA</option>
+                  <option>COLOMBIA</option>
+                  <option>CONGO, THE DEMOCRATI</option>
+                  <option>COOK ISLANDS</option>
+                  <option>COSTA RICA</option>
+                  <option>CÔTE D&#39;IVOIRE</option>
+                  <option>CROATIA</option>
+                  <option>CUBA</option>
+                  <option>CURAÇAO</option>
+                  <option selected="SELECTED">CYPRUS </option>
+                  <option>CZECH REPUBLIC</option>
+                  <option>DENMARK</option>
+                  <option>DJIBOUTI</option>
+                  <option>DOMINICA</option>
+                  <option>DOMINICAN REPUBLIC</option>
+                  <option>ECUADOR</option>
+                  <option>EGYPT</option>
+                  <option>EL SALVADOR</option>
+                  <option>ESTONIA</option>
+                  <option>ETHIOPIA/a>
+                    <option>FIJI</option>
+                    <option>FINLAND</option>
+                    <option>FRANCE</option>
+                    <option>FRENCH GUIANA</option>
+                    <option>FRENCH POLYNESIA</option>
+                    <option>GAMBIA</option>
+                    <option>GERMANY</option>
+                    <option>GHANA</option>
+                    <option>GREECE</option>
+                    <option>GREENLAND</option>
+                    <option>GRENADA</option>
+                    <option>GUADELOUPE</option>
+                    <option>GUAM</option>
+                    <option>GUATEMALA</option>
+                    <option>GUERNSEY</option>
+                    <option>GUINEA</option>
+                    <option>GUYANA</option>
+                    <option>HAITI</option>
+                    <option>HONDURAS</option>
+                    <option>HONG KONG</option>
+                    <option>HUNGARY</option>
+                    <option>INDIA</option>
+                    <option>INDONESIA</option>
+                    <option>IRAN</option>
+                    <option>IRAQ</option>
+                    <option>IRELAND</option>
+                    <option>ISLE OF MAN</option>
+                    <option>ISRAEL</option>
+                    <option>ITALY</option>
+                    <option>JAMAICA</option>
+                    <option>JAPAN</option>
+                    <option>JERSEY</option>
+                    <option>JORDAN</option>
+                    <option>KAZAKHSTAN</option>
+                    <option>KENYA</option>
+                    <option>KIRIBATI</option>
+                    <option>KOREA</option>
+                    <option>KUWAIT</option>
+                    <option>FRENCH POLYNESIA</option>
+                    <option>GAMBIA</option>
+                    <option>GERMANY</option>
+                    <option>GHANA</option>
+                    <option>GREECE</option>
+                    <option>GREENLAND</option>
+                    <option>GRENADA</option>
+                    <option>GUADELOUPE</option>
+                    <option>GUAM</option>
+                    <option>GUATEMALA</option>
+                    <option>GUERNSEY</option>
+                    <option>GUINEA</option>
+                    <option>GUYANA</option>
+                    <option>HAITI</option>
+                    <option>HONDURAS</option>
+                    <option>HONG KONG</option>
+                    <option>HUNGARY</option>
+                    <option>INDIA</option>
+                    <option>INDONESIA</option>
+                    <option>IRAN</option>
+                    <option>IRAQ</option>
+                    <option>IRELAND</option>
+                    <option>ISLE OF MAN</option>
+                    <option>ISRAEL</option>
+                    <option>ITALY</option>
+                    <option>JAMAICA</option>
+                    <option>JAPAN</option>
+                    <option>JERSEY</option>
+                    <option>JORDAN</option>
+                    <option>KAZAKHSTAN</option>
+                    <option>KENYA</option>
+                    <option>KIRIBATI</option>
+                    <option>KOREA</option>
+                    <option>KUWAIT</option>
+                    <option>LAO</option>
+                    <option>LATVIA</option>
+                    <option>LEBANON</option>
+                    <option>LIBERIA</option>
+                    <option>LIBYAN ARAB JAMAHIRI</option>
+                    <option>LIECHTENSTEIN</option>
+                    <option>LITHUANIA</option>
+                    <option>LUXEMBOURG</option>
+                    <option>MACEDONIA</option>
+                    <option>MADAGASCAR</option>
+                    <option>MALAWI</option>
+                    <option>MALAYSIA</option>
+                    <option>MALDIVES</option>
+                    <option>MALI</option>
+                    <option>MALTA</option>
+                    <option>MARSHALL ISLANDS</option>
+                    <option>MARTINIQUE</option>
+                    <option>MAURITANIA</option>
+                    <option>MAURITIUS</option>
+                    <option>MEXICO</option>
+                    <option>MONGOLIA</option>
+                    <option>MOROCCO</option>
+                    <option>MOZAMBIQUE</option>
+                    <option>MYANMAR</option>
+                    <option>NAMIBIA</option>
+                    <option>NAURU</option>
+                    <option>NEPAL</option>
+                    <option>NETHERLANDS</option>
+                    <option>NETHERLANDS ANTILLES</option>
+                    <option>NEW CALEDONIA</option>
+                    <option>NEW ZEALAND</option>
+                    <option>NICARAGUA</option>
+                    <option>NIGERIA</option>
+                    <option>NIUE</option>
+                    <option>NORTHERN MARIANA ISLAND</option>
+                    <option>NORWAY</option>
+                    <option>OMAN</option>
+                    <option>PAKISTAN</option>
+                    <option>PALAU</option>
+                    <option>PALESTINIAN TERRITOR</option>
+                    <option>PANAMA</option>
+                    <option>PAPUA NEW GUINEA"</option>
+                    <option>PERU</option>
+                    <option>PHILIPPINES</option>
+                    <option>POLAND</option>
+                    <option>PORTUGAL</option>
+                    <option>PUERTO RICO</option>
+                    <option>QATAR</option>
+                    <option>RÉUNION</option>
+                    <option>ROMANIAN</option>
+                    <option>RUSSIAN FEDERATION</option>
+                    <option>RWANDA</option>
+                    <option>SAINT BARTHELEMY</option>
+                    <option>SAINT HELENA</option>
+                    <option>SAINT KITTS AND NEVIS</option>
+                    <option>SAINT LUCIA</option>
+                    <option>SAINT-MARTIN</option>
+                    <option>SAINT VINCENT AND THE GRENADINES</option>
+                    <option>SAN MARINO</option>
+                    <option>SAUDI ARABIA</option>
+                    <option>SENEGAL</option>
+                    <option>SERBIA</option>
+                    <option>SEYCHELLES</option>
+                    <option>SIERRA LEONE</option>
+                    <option>SINGAPORE</option>
+                    <option>SINT MAARTEN</option>
+                    <option>SLOVAKIA</option>
+                    <option>SLOVENIA</option>
+                    <option>SOLOMON ISLANDS</option>
+                    <option>SOMALIA</option>
+                    <option>SOUTH AFRICA</option>
+                    <option>SPAIN</option>
+                    <option>SRI LANKA</option>
+                    <option>SUDAN</option>
+                    <option>SWAZILAND</option>
+                    <option>SWEDEN</option>
+                    <option>SWITZERLAND</option>
+                    <option>SYRIAN ARAB REPUBLIC</option>
+                    <option>TAIWAN</option>
+                    <option>TANZANIA</option>
+                    <option>THAILAND</option>
+                    <option>TRINIDAD AND TOBAGO</option>
+                    <option>TUNISIA</option>
+                    <option>TURKEY</option>
+                    <option>TURKMENISTAN</option>
+                    <option>TUVALU</option>
+                    <option>UGANDA</option>
+                    <option>UKRAINE</option>
+                    <option>UNITED ARAB EMIRATES</option>
+                    <option>UNITED KINGDOM</option>
+                    <option>UNITED STATES</option>
+                    <option>UNITED STATES MINOR OUTLYING ISLANDS</option>
+                    <option>URUGUAY</option>
+                    <option>UZBEKISTAN</option>
+                    <option>VANUATU</option>
+                    <option>VENEZUELA</option>
+                    <option>VIET NAM</option>
+                    <option>VIRGIN ISLANDS BRITISH</option>
+                    <option>VIRGIN ISLANDS US</option>
+                    <option>YEMEN</option>
+                    <option>ZAMBIA</option>
+                    <option>ZIMBABWE</option>
+                </select>
+                <input class="form-control myinputbox" type="search" placeholder="System Name" aria-label="Search" id="pvname">
+                <button class="btn btn-light myinputbox" id="submitbtn" onClick="submit()">Search</button>
+              </div>  
+            </div>
+    </nav>
+  </header>
+
+  <div id="mapid" class="mymap"></div>
+  
+
+  <!-- About Modal -->
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="aboutmodal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="about-title" ></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <h6 class="about-body"id="about" style="margin: 10px;">
+        </h6>
+        <div class="modal-footer">
+          <button type="button mybtn" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Profile Modal -->
+   <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="proflabel" aria-hidden="true" id="profmodal">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="proflabel">System Name</h5>
+       </div>
+        <div  style="padding: 1rem;">
+        <div class="tabbable"> <!-- Only required for left/right tabs -->
+          <img src="" class="imagelink">
+          <ul class="nav nav-tabs">
+            <!--  <li class="nav-item  active"><a  class= "nav-link" href="#about" data-toggle="tab" id="abouttab">About</a></li> -->
+              <li class="nav-item active "><a class="nav-link active" href="#details" data-toggle="tab"  id="detailstab">Details</a></li>
+              <li class="nav-item "><a class="nav-link" href="#readings" data-toggle="tab"  id="readingstab">Monthly Readings</a></li>
+              <li class="nav-item "><a class="nav-link" href="#statistics" data-toggle="tab"  id="statisticstab">Statistics</a></li>
+            </ul>
+            <div class="tab-content">
+              <!-- <div class="tab-pane active" id="about">
+              </div> -->
+              <div class="tab-pane active" id="details">
+              </div>
+              <div class="tab-pane " id="readings">
+              </div>
+              <div class="tab-pane" id="statistics">
+                <div style="width: 100%;">
+                  <canvas id="myChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div> 
+        <div class="modal-footer">
+          <button type="button mybtn" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Modal -->
+    <div id="Searching_Modal" class="modal" tabindex="-1" role="dialog" data-keyboard="false"
+    data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-transparent border border-0">
+          <div class="modal-body" >
+              <div class="loader" style="margin: auto"><br><br><br><br></div>
+          </div>
+      </div>
+  </div>
+  </div>
+<!-- Toogle Buttons -->
+ <div class="btn-group btn-group-toggle mybuttons" data-toggle="buttons">
+      <label class="btn btn-secondary active btn-light">
+        <input type="radio" name="options" id="Size" autocomplete="off" checked> Location
+      </label>
+      <label class="btn btn-secondary btn-light">
+        <input type="radio" name="options" id="Power" autocomplete="off"> Power
+      </label>
+    </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="/assets/leaflet/leaflet.js"></script> 
+    <script src="/assets/leaflet_markers/leaflet.markercluster.js"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+   <script src="/js/script.js"></script>
+
+
+</body>
+
+</html>

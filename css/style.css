@@ -1,0 +1,83 @@
+html,body{
+    height: 100%;
+    width:100%;
+    overflow-x: hidden;
+}
+
+.body{
+    font-family:Yanone Kaffeesatz sans-serif;
+    font-size: 35px;
+    background-color: aquamarine;
+    padding: 1%;
+}
+
+.searchb{
+    background-color: aliceblue;
+    color: aliceblue;
+}
+.myform{
+    position: fixed;
+    right: 1vw;
+    
+}
+.sunnybot{
+    font-size: 40px;
+    text-align: right;
+}
+.tab{
+    font-family: 'Yanone Kaffeesatz', sans-serif; 
+    font-size: 35px;
+    padding: 1vw;
+}
+.size{
+    background-color:#00cccc;
+    height:10vh;
+    width: auto;
+}
+.mylogo{
+ position:fixed;
+ width: 15vw;
+ height: auto;
+ left: 10px;
+ padding: 20px 0px;
+}
+.mapsize{
+    width:auto;
+    height:90vh;
+}
+.myinputbox{
+    padding: 1%;
+}
+@media only screen and (max-width: 850px ) {
+    .size{
+        background-color:#00cccc;
+        position: relative;
+        bottom: 40%;
+    }
+    .mylogo{
+        left: 75%;
+        position: absolute;
+        width: 20%;
+
+    }
+    .mapsize{
+        top: 10%;
+    }
+    .tab{
+        font-family: 'Yanone Kaffeesatz', sans-serif; 
+        font-size: 20px;
+        padding: 1%;
+    }
+    .myinputbox{
+       width: 100%;
+       text-align: center;
+       margin-left: auto;
+       margin-right: auto;
+    }
+    .myform{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        top: 0px;
+    }
+}

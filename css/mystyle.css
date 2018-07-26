@@ -1,0 +1,84 @@
+html,body{
+    height: 100%;
+    width:100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#mapid { height: 100% }
+
+.mylogo{
+    height:7vh;
+    width: auto;
+}
+.menu{
+    margin-left: auto;
+    margin-right: auto;
+}
+.tab{
+    font-family: 'Yanone Kaffeesatz', sans-serif; 
+    font-size: 25px;
+    color: aliceblue;
+    margin-top: 1% ; 
+}
+.mymap{
+    width:auto;
+    height:100%;
+    top:10%;
+}
+.myinputbox{
+    font-size: 15px;
+    margin-left: 1%;
+    position: relative;
+}
+.mybtn{
+    text-align: center;
+    position: fixed;
+    margin-left: 1%;
+}
+
+.mybuttons{
+    position: fixed;
+    z-index: 400;
+    left:4%;
+    top:12%;
+}
+.mylabel{
+    color: #2A80D5;
+}
+.imagelink{
+    height: 120px;
+    width: auto;
+    right: 5px;
+    position: fixed;
+    top:4px;
+    border:3px solid white;
+}
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .zoom {
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
