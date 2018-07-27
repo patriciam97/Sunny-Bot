@@ -11,7 +11,7 @@ module.exports = function(app, db) {
     app.get(base+'/pvs/id/:id', (req, res) => {
         const id = req.params.id;
         const details = { '_id': id };
-        db.collection('PVSystemProfiles').findOne(details, (err, item) => {
+        db.collection('ALLPVS').findOne(details, (err, item) => {
           if (err) {
             res.send({'error':'An error has occurred'});
           } else {

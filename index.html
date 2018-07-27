@@ -13,14 +13,14 @@
   <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
   <link rel="stylesheet" href="/assets/leaflet/leaflet.css">
   <link rel="stylesheet" href="/assets/leaflet_markers/MarkerCluster.css" />
-	<link rel="stylesheet" href="/assets/leaflet_markers/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="/assets/leaflet_markers/MarkerCluster.Default.css" />
   <link rel="stylesheet" href="/css/mystyle.css">
 
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark " style="height: 10%">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark ">
       <div class="container menu">
           <a href="#" class="navbar-brand">
               <img src="logo.png" class="mylogo">
@@ -294,7 +294,7 @@
 
    <!-- Profile Modal -->
    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="proflabel" aria-hidden="true" id="profmodal">
-    <div class="modal-dialog " role="document">
+    <div class="modal-dialog modal-lg " role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="proflabel">System Name</h5>
@@ -304,9 +304,9 @@
           <img src="" class="imagelink">
           <ul class="nav nav-tabs">
             <!--  <li class="nav-item  active"><a  class= "nav-link" href="#about" data-toggle="tab" id="abouttab">About</a></li> -->
-              <li class="nav-item active "><a class="nav-link active" href="#details" data-toggle="tab"  id="detailstab">Details</a></li>
-              <li class="nav-item "><a class="nav-link" href="#readings" data-toggle="tab"  id="readingstab">Monthly Readings</a></li>
-              <li class="nav-item "><a class="nav-link" href="#statistics" data-toggle="tab"  id="statisticstab">Statistics</a></li>
+              <li class="nav-item active " id="detailsli"><a class="nav-link active" href="#details" data-toggle="tab"  id="detailstab">Details</a></li>
+              <li class="nav-item "id="readingsli"><a class="nav-link" href="#readings" data-toggle="tab"  id="readingstab">Monthly Readings</a></li>
+              <li class="nav-item "id="statisticsli"><a class="nav-link" href="#statistics" data-toggle="tab"  id="statisticstab">Statistics</a></li>
             </ul>
             <div class="tab-content">
               <!-- <div class="tab-pane active" id="about">
@@ -316,15 +316,13 @@
               <div class="tab-pane " id="readings">
               </div>
               <div class="tab-pane" id="statistics">
-                <div style="width: 100%;">
-                  <canvas id="myChart"></canvas>
-                </div>
+                <div id="myChart"></div>
               </div>
             </div>
           </div>
       </div> 
         <div class="modal-footer">
-          <button type="button mybtn" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button mybtn" class="btn btn-secondary" data-dismiss="modal" id="profclose">Close</button>
         </div>
       </div>
     </div>
@@ -360,7 +358,11 @@
         crossorigin="anonymous"></script>
     <script src="/assets/leaflet/leaflet.js"></script> 
     <script src="/assets/leaflet_markers/leaflet.markercluster.js"></script>
-    <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://unpkg.com/sweetalert2@7.17.0/dist/sweetalert2.all.js"></script>
    <script src="/js/script.js"></script>
 
 
