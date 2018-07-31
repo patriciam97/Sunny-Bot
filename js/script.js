@@ -179,6 +179,7 @@ function findPVSystem(name){
         dataType: "json" ,
         success: function(result){
             getPVS(result); 
+            document.getElementById("pvname").value="";
         },
         error:function(){ 
             swal({
@@ -307,7 +308,7 @@ function getProfile(id,system,str2){
                     if(pv.descinfo!=null && pv.descinfo!="" && pv.descinfo!==undefined){
                         str1=str1+"<tr> <td class=\"mylabel\">Description: </td> <td> "+pv.descinfo+"</td></tr>";
                     }
-
+                    str1=str1+"<tr> <td class=\"mylabel\">Link to Profile: </td> <td> <a href=\"https://www.sunnyportal.com/Templates/PublicPageOverview.aspx?plant="+pv._id+"\"> Link</a></td></tr>";
                     if(pv.monthlyReadings.length!=0){
                         months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
                         pagination="<div><nav aria-label=\"Page navigation\"><ul class=\"pagination\">";
@@ -315,6 +316,7 @@ function getProfile(id,system,str2){
                         c=0;
                         var limit=156;
                         for(x=0;x<pv.monthlyReadings.length;x=x+12){
+                                var total=0;
                                 var year;
                                 var datapoints=[];
                                 d=0;
@@ -331,6 +333,7 @@ function getProfile(id,system,str2){
                                 for(i=x;i<x+12;i++){
                                     var date = new Date(pv.monthlyReadings[i].timestamp);
                                     var value= pv.monthlyReadings[i].value;
+                                    total=(total+parseFloat(value));
                                     locale = "en-us",
                                     month = date.toLocaleString(locale, { month: "long" });
                                     year= date.getFullYear();
@@ -339,7 +342,7 @@ function getProfile(id,system,str2){
                                     d++;
                                 }
                                 datalines.push({"name":year,"data":datapoints});
-                                table=table+"</tbody></table>";
+                                table=table+"</tbody></table><p>Total production: "+total+"</p";
                                 tables[c]=table;
                                 c++;
                         }
