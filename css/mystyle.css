@@ -5,7 +5,9 @@ html,body{
     overflow-y: hidden;
 }
 
-#mapid { height: 100% }
+#mapid { 
+    height: 100%;
+ }
 #myChart{
     min-width: 310px;
     max-width: 800px;

@@ -21,10 +21,9 @@ module.exports = function(app, db) {
     });
 
     app.get(base+'/pvs/name/:name', (req, res) => {
-      //const name = req.params.name;
-      const name = upperCaseFirst(req.params.name);
+      const name = req.params.name;
       const regex = RegExp("/.*" + name + ".*/");
-      const details = { 'System': new RegExp('^' + name)};
+      const details = { 'System': new RegExp(name,'i')};
 
       db.collection('DirectoryCollection').find(details).toArray(function(err, result) {
         if (err) throw err;

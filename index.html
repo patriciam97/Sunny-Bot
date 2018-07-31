@@ -20,6 +20,7 @@
 
 <body>
   <header>
+    <!-- Navigation bar locaated at the top of the page -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark ">
       <div class="container menu">
           <a href="#" class="navbar-brand">
@@ -30,7 +31,9 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse container" id="navbarNav">
+                <!-- About modal pops up when this label is clicked-->
                 <label class="nav-link tab" data-toggle="modal" data-target="#aboutmodal">About</label>
+                <!-- Dropdown for countries-->
                 <label class="nav-link tab" for="countries">Country </label>
                 <select class="form-control myinputbox" id="countries">
                   <option >ALL</option>
@@ -263,13 +266,14 @@
                     <option>ZAMBIA</option>
                     <option>ZIMBABWE</option>
                 </select>
+                <!-- Search for a specific PV system-->
                 <input class="form-control myinputbox" type="search" placeholder="System Name" aria-label="Search" id="pvname">
                 <button class="btn btn-light myinputbox" id="submitbtn" onClick="submit()">Search</button>
               </div>  
             </div>
     </nav>
   </header>
-
+  <!--maps-->
   <div id="mapid" class="mymap"></div>
   
 
@@ -303,14 +307,11 @@
         <div class="tabbable"> <!-- Only required for left/right tabs -->
           <img src="" class="imagelink">
           <ul class="nav nav-tabs">
-            <!--  <li class="nav-item  active"><a  class= "nav-link" href="#about" data-toggle="tab" id="abouttab">About</a></li> -->
               <li class="nav-item active " id="detailsli"><a class="nav-link active" href="#details" data-toggle="tab"  id="detailstab">Details</a></li>
               <li class="nav-item "id="readingsli"><a class="nav-link" href="#readings" data-toggle="tab"  id="readingstab">Monthly Readings</a></li>
               <li class="nav-item "id="statisticsli"><a class="nav-link" href="#statistics" data-toggle="tab"  id="statisticstab">Statistics</a></li>
             </ul>
             <div class="tab-content">
-              <!-- <div class="tab-pane active" id="about">
-              </div> -->
               <div class="tab-pane active" id="details">
               </div>
               <div class="tab-pane " id="readings">
@@ -328,7 +329,6 @@
     </div>
   </div>
   
-  
   <!-- Modal -->
     <div id="Searching_Modal" class="modal" tabindex="-1" role="dialog" data-keyboard="false"
     data-backdrop="static">
@@ -340,15 +340,7 @@
       </div>
   </div>
   </div>
-<!-- Toogle Buttons -->
- <div class="btn-group btn-group-toggle mybuttons" data-toggle="buttons">
-      <label class="btn btn-secondary active btn-light">
-        <input type="radio" name="options" id="Size" autocomplete="off" checked> Location
-      </label>
-      <label class="btn btn-secondary btn-light">
-        <input type="radio" name="options" id="Power" autocomplete="off"> Power
-      </label>
-    </div>
+   
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
