@@ -2,7 +2,7 @@
 
 ## What is Sunny-Bot?
 
-Using the data collected from my web crawler (link: https://github.com/patriciam97/Web-Crawler ),I have developed a visualisation page, where the user can explore the PV systems installed in a country specified by him.
+Using the data collected from my [web crawler](https://github.com/patriciam97/Web-Crawler),I have developed a visualisation page, where the user can explore the PV systems installed in a country specified by him.
 
 ### What information does Sunny-Bot hold?
 The information across all PV Systems varies.
